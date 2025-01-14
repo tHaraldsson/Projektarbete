@@ -1,0 +1,173 @@
+/* Grundinställningar */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Rubrik-namn styling */
+.rubrik-namn {
+    text-align: center;
+    /* Centerar rubrikerna */
+    margin: 10px;
+    
+}
+
+.rubrik-namn h1 {
+    margin: 5px 0;
+    /* Avstånd mellan rubriker */
+    font-size: 24px;
+    /* Mindre textstorlek för mobiler */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffa600;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* Tillåter radbrytning för små skärmar */
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    max-width: 100%;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: black;
+}
+
+.dark-link {
+    background-color: black;
+    border-radius: 5px;
+}
+
+
+
+#welcome {
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+h3 {
+    color: #ffa600;
+}
+
+/* Hero-bild styling */
+#hero-image {
+    width: 100%;
+    height: auto;
+    /* Bevarar proportionerna */
+    display: block;
+    object-fit: cover;
+}
+
+/* Main section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 20px;
+    text-align: left;
+}
+
+main p {
+    font-size: 16px;
+    /* Justera textstorlek */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+
+}
+
+#om-mig {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#CV-bild {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+#om-mig-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+#om-mig-rubrik {
+    color: #ffa600;
+}
+
+/* Media queries för större skärmar */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    .rubrik-namn h1 {
+        display: flex;
+        line-height: 0.8;
+    }
+
+    nav ul {
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    #hero-image {
+        height: 400px;
+        /* Fast höjd för större skärmar */
+    }
+
+    main h1 {
+        font-size: 24px;
+    }
+
+    main p {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}
