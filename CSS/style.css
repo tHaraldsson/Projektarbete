@@ -5,6 +5,8 @@ body {
     padding: 0;
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
+    height: 100%;
+    flex-direction: column;
 }
 
 /* Rubrik-namn styling */
@@ -12,7 +14,7 @@ body {
     text-align: center;
     /* Centerar rubrikerna */
     margin: 10px;
-    
+
 }
 
 .rubrik-namn h1 {
@@ -39,7 +41,6 @@ nav ul {
     gap: 20px;
     list-style: none;
     padding: 0;
-    max-width: 100%;
 }
 
 nav ul li {
@@ -70,6 +71,7 @@ nav ul li a:hover {
     width: 100%;
     margin: 20px auto;
     padding: 10px;
+    margin-bottom: 100px;
 }
 
 h3 {
@@ -93,6 +95,7 @@ main {
     justify-content: left;
     padding: 20px;
     text-align: left;
+    flex-grow: 1;
 }
 
 main p {
@@ -102,12 +105,28 @@ main p {
 
 /* Footer styling */
 footer {
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: white;
     font-size: 14px;
+    gap: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 
+#github-bild {
+    width: 30px;
+    height: 30px;
+}
+
+#linkedin-bild {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px
 }
 
 #om-mig {
@@ -134,6 +153,90 @@ footer {
 #om-mig-rubrik {
     color: #ffa600;
 }
+
+#form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+    color: #ffa600;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ffa600;
+    box-shadow: 0 0 4px rgba(255, 166, 0, 0.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    width: auto;
+    /* Anpassar bredden till innehållet */
+    background-color: #ffa600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #cc8400;
+}
+
 
 /* Media queries för större skärmar */
 @media (min-width: 768px) {
