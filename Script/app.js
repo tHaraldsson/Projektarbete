@@ -9,10 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // Skicka formulärdata via EmailJS
         emailjs.sendForm("service_es269xs", "template_dkjwxx5", form)
             .then(function (response) {
-                alert("Ditt meddelande har skickats! Vi återkommer så snart som möjligt.");
+                alert("Ditt meddelande har skickats! Jag återkommer så snart som möjligt.");
                 form.reset(); // Rensa formuläret efter skickat meddelande
             }, function (error) {
                 alert("Ett fel uppstod: " + error.text);
             });
     });
+});
+
+const mobilIkon = document.getElementById("mobilnav-ikon");
+const mobilNav = document.getElementById("mobilnav");
+
+mobilIkon.addEventListener("click", () => {
+    mobilNav.classList.toggle("active");
 });

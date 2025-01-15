@@ -9,6 +9,19 @@ body {
     flex-direction: column;
 }
 
+#mobilnav-ikon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    /* Justera detta för att flytta den upp eller ner */
+    left: 20px;
+    /* Justera detta för att flytta den vänster eller höger */
+    z-index: 100;
+    /* Se till att ikonen ligger ovanpå andra element om nödvändigt */
+}
+
+
 /* Rubrik-namn styling */
 .rubrik-namn {
     text-align: center;
@@ -31,6 +44,18 @@ header {
     align-items: center;
     background-color: #ffa600;
     color: white;
+}
+
+#stornav {
+    display: none;
+}
+
+#mobilnav {
+    height: 0;
+}
+
+#mobilnav.active {
+    height: 100px;
 }
 
 nav ul {
@@ -96,11 +121,13 @@ main {
     padding: 20px;
     text-align: left;
     flex-grow: 1;
+    padding-bottom: 100px;
 }
 
 main p {
     font-size: 16px;
     /* Justera textstorlek */
+    text-align: center;
 }
 
 /* Footer styling */
@@ -138,8 +165,6 @@ footer {
 }
 
 #CV-bild {
-    width: 150px;
-    height: 150px;
     object-fit: cover;
     border-radius: 50px;
 }
@@ -152,6 +177,7 @@ footer {
 
 #om-mig-rubrik {
     color: #ffa600;
+    text-align: center;
 }
 
 #form {
@@ -180,8 +206,10 @@ fieldset {
 
 legend {
     font-size: 1.5rem;
-    color: #ffa600;
+    color: #ffa600 !important;
     margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .form-group {
@@ -237,19 +265,78 @@ input[type="submit"]:hover {
     background-color: #cc8400;
 }
 
+#kontakt-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#kontakt-info h2 {
+    color: #ffa600;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#kontakt-info ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#kontakt-info ul li {
+    margin-bottom: 10px;
+}
+
+#kontakt-info ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+#kontakt-info ul li a:hover {
+    color: #ffa600;
+}
+
 
 /* Media queries för större skärmar */
 @media (min-width: 768px) {
+
+    
+
     header {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 0 50px;
+
     }
 
     .rubrik-namn h1 {
         display: flex;
         line-height: 0.8;
+    }
+
+    #mobilnav {
+        display: none;
+    }
+
+    #mobilnav-ikon {
+        display: none;
+    }
+
+    #stornav {
+        display: flex;
     }
 
     nav ul {
@@ -272,5 +359,20 @@ input[type="submit"]:hover {
 
     footer {
         font-size: 16px;
+    }
+
+    #kontakt-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+        /* Maxbredd som formens ruta */
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
