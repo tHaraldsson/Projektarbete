@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Förhindra att sidan laddas om
 
+        // Skicka formulärdata via EmailJS
         emailjs.sendForm("service_es269xs", "template_dkjwxx5", form)
-            .then(function () {
-                alert("Ditt meddelande har skickats!");
-                form.reset(); // Rensa formuläret
+            .then(function (response) {
+                alert("Ditt meddelande har skickats! Vi återkommer så snart som möjligt.");
+                form.reset(); // Rensa formuläret efter skickat meddelande
             }, function (error) {
-                console.error("Ett fel uppstod:", error);
                 alert("Ett fel uppstod: " + error.text);
             });
     });
