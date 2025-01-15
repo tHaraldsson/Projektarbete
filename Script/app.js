@@ -1,3 +1,14 @@
+
+console.log("JavaScript laddat");
+
+const mobilIkon = document.getElementById("mobilnav-ikon");
+const mobilNav = document.getElementById("mobilnav");
+
+mobilIkon.addEventListener("click", () => {
+    console.log('Hamburgerikonen klickades!');
+    mobilNav.classList.toggle("active");
+});
+
 emailjs.init("gbZbI9VieA3iRMqna"); // Ersätt med din Public Key
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -15,11 +26,4 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Ett fel uppstod: " + error.text);
             });
     });
-});
-
-const mobilIkon = document.getElementById("mobilnav-ikon");
-const mobilNav = document.getElementById("mobilnav");
-
-mobilIkon.addEventListener("click", () => {
-    mobilNav.classList.toggle("active");
 });

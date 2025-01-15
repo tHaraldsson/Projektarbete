@@ -51,11 +51,12 @@ header {
 }
 
 #mobilnav {
-    height: 0;
+    display: none;
 }
 
 #mobilnav.active {
-    height: 100px;
+    display: flex;
+    transition: height 1s ease;
 }
 
 nav ul {
