@@ -20,18 +20,20 @@
         </div>
         <nav id="mobilnav">
             <ul>
-                <li class="dark-link"><a href="index.html">Hem</a></li>
+                <li><a href="index.html">Hem</a></li>
                 <li><a href="teknik.html">Teknik</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="dark-link"><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="CV.html">CV</a></li>
             </ul>
         </nav>
         <nav id="stornav">
             <ul>
-                <li class="dark-link"><a href="index.html">Hem</a></li>
+                <li><a href="index.html">Hem</a></li>
                 <li><a href="teknik.html">Teknik</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="dark-link"><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="CV.html">CV</a></li>
             </ul>
         </nav>
 
@@ -80,15 +82,33 @@
         </section>
     </main>
     <footer>
-        <p>2025 Tommy H</p>
+        <p>© Tommy Haraldsson</p>
         <a href="https://github.com/tHaraldsson"><img id="github-bild"
                 src="https://static-00.iconduck.com/assets.00/github-icon-512x512-bgdhvgjm.png" alt="github länk"></a>
         <a href="https://www.linkedin.com/in/tommy-haraldsson-700069111/"><img id="linkedin-bild"
                 src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
                 alt="linked in länk"></a>
     </footer>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="Script/app.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>emailjs.init("gbZbI9VieA3iRMqna"); // Ersätt med din Public Key
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+        
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Förhindra att sidan laddas om
+        
+                // Skicka formulärdata via EmailJS
+                emailjs.sendForm("service_es269xs", "template_dkjwxx5", form)
+                    .then(function (response) {
+                        alert("Ditt meddelande har skickats! Jag återkommer så snart som möjligt.");
+                        form.reset(); // Rensa formuläret efter skickat meddelande
+                    }, function (error) {
+                        alert("Ett fel uppstod: " + error.text);
+                    });
+            });
+        });</script>
 </body>
 
 </html>

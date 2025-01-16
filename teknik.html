@@ -13,28 +13,131 @@
 
 <body>
     <header>
+        <a><img id="mobilnav-ikon" src="Pictures/menu.png" alt="hamburger länk ikon"></a>
         <div class="rubrik-namn">
             <h1>Tommy</h1>
             <h1>Haraldsson</h1>
         </div>
-        <nav>
+        <nav id="mobilnav">
             <ul>
                 <li><a href="index.html">Hem</a></li>
                 <li class="dark-link"><a href="teknik.html">Teknik</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+        </nav>
+        <nav id="stornav">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li class="dark-link"><a href="teknik.html">Teknik</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="CV.html">CV</a></li>
             </ul>
         </nav>
 
     </header>
     <main>
-
+        <h2>Teknik | Mina tekniska färdigheter och verktyg</h2>
+        <label for="filter">Filtrera artiklar:</label>
+        <select id="filter" onchange="filterArticles()">
+            <option value="">Välj ett nyckelord</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Script">JavaScript</option>
+            <option value="Java">Java</option>
+            <option value="Databaser">Databaser</option>
+        </select>
+        <section id="articles">
+            <article data-keywords="HTML" class="teknik-artikel">
+                <img class="artikel-bild" src="Pictures/HTML.png"
+                    srcset="Pictures/HTML.png 1200w, Pictures/HTML.png 1200w" sizes="(max-width: 600px) 100px, 200px"
+                    alt="Bild på HTML-logga">
+                <h3>HTML – Grunden i min webbutveckling</h3>
+                <p>
+                    Jag har lärt mig grunderna i HTML och använder det för att bygga strukturerade och semantiska
+                    webbsidor.
+                    Under min utbildning i webbutveckling har jag arbetat mycket med HTML5 och förstått vikten av att
+                    skriva ren och semantisk kod. Jag använder HTML för att skapa en tydlig struktur på mina webbplatser
+                    och säkerställa att de är tillgängliga och användarvänliga.
+                </p>
+            </article>
+            <article data-keywords="CSS" class="teknik-artikel">
+                <img class="artikel-bild" src="Pictures/CSS.png" srcset="Pictures/CSS.png 2050w, Pictures/CSS.png 2050w"
+                    sizes="(max-width: 600px) 100px, 200px" alt="Bild på CSS-logga">
+                <h3>CSS – Styla och designa moderna webbsidor</h3>
+                <p>
+                    Jag använder CSS för att göra mina webbsidor stilrena, responsiva och användarvänliga.
+                    CSS är en av de viktigaste teknikerna jag använder för att styra layout, färger, typsnitt och
+                    responsivitet på mina webbplatser. Jag har arbetat mycket med CSS3 och använder moderna metoder för
+                    att skapa flexibla och snygga designlösningar.
+                </p>
+            </article>
+            <article data-keywords="Script" class="teknik-artikel">
+                <img class="artikel-bild" src="Pictures/JAVASCRIPT.png"
+                    srcset="Pictures/JAVASCRIPT.png 2000w, Pictures/JAVASCRIPT.png 2000w"
+                    sizes="(max-width: 600px) 100px, 200px" alt="Bild på JavaScript-logga">
+                <h3>JavaScript – Dynamik och interaktivitet på webben</h3>
+                <p>
+                    Jag använder JavaScript för att skapa dynamiska och interaktiva webbsidor.
+                    JavaScript är ett av de mest kraftfulla verktygen jag använder för att lägga till funktionalitet på
+                    mina webbplatser. Med JavaScript kan jag manipulera HTML och CSS i realtid, hantera
+                    användarinteraktioner och bygga avancerade webblösningar.
+                </p>
+            </article>
+            <article data-keywords="Java" class="teknik-artikel">
+                <img class="artikel-bild" src="Pictures/JAVA.png"
+                    srcset="Pictures/JAVA.png 800w, Pictures/JAVA.png 1200w" sizes="(max-width: 600px) 100px, 200px"
+                    alt="Bild på JAVA-logga">
+                <h3>Java – Robust och objektorienterad utveckling</h3>
+                <p>
+                    Java är ett av de mest använda programmeringsspråken för stora, skalbara och prestandakrävande
+                    system.
+                    Jag använder Java för att bygga kraftfulla och hållbara applikationer. Med sin objektorienterade
+                    struktur och omfattande standardbibliotek, är Java ett utmärkt val för både webb- och
+                    mobilutveckling, samt för att bygga serverbaserade system och backendlösningar.
+                </p>
+            </article>
+            <article data-keywords="Databaser" class="teknik-artikel">
+                <img class="artikel-bild" src="Pictures/DB.png" srcset="Pictures/DB.png 512w, Pictures/DB.png 768w"
+                    sizes="(max-width: 600px) 100px, 200px" alt="Bild på databas-logga">
+                <h3>SQL och NoSQL – Flexibilitet och Effektivitet i Databashantering</h3>
+                <p>
+                    Databaser spelar en avgörande roll i alla system som hanterar och lagrar data. Beroende på
+                    applikationens behov väljer jag mellan relationsdatabaser (SQL) och icke-relationsdatabaser (NoSQL).
+                    Jag har erfarenhet av att arbeta med både SQL och NoSQL databaser och har god förståelse för deras
+                    fördelar och användningsområden.
+                </p>
+            </article>
+        </section>
     </main>
     <footer>
-        <p>2025 Tommy H</p>
-        <a href="https://github.com/tHaraldsson"><img id="github-bild" src="https://static-00.iconduck.com/assets.00/github-icon-512x512-bgdhvgjm.png" alt="github länk"></a>
-        <a href="https://www.linkedin.com/in/tommy-haraldsson-700069111/"><img id="linkedin-bild" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png" alt="linked in länk"></a>
+        <p>© Tommy Haraldsson</p>
+        <a href="https://github.com/tHaraldsson"><img id="github-bild"
+                src="https://static-00.iconduck.com/assets.00/github-icon-512x512-bgdhvgjm.png" alt="github länk"></a>
+        <a href="https://www.linkedin.com/in/tommy-haraldsson-700069111/"><img id="linkedin-bild"
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
+                alt="linked in länk"></a>
     </footer>
+    <script>
+        function filterArticles() {
+            let filterValue = document.getElementById('filter').value;
+            let articles = document.querySelectorAll('#articles article');
+
+            // Gå igenom alla artiklar och visa de som matchar det valda nyckelordet
+            articles.forEach(function (article) {
+                let keywords = article.getAttribute('data-keywords');
+
+                if (filterValue === "" || keywords.includes(filterValue)) {
+                    article.style.display = "flex"; // Visa artikel
+                } else {
+                    article.style.display = "none"; // Dölj artikel
+                }
+            });
+        }
+    </script>
+    <script src="Script/app.js"></script>
 </body>
 
 </html>
