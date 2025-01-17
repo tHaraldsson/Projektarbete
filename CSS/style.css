@@ -349,9 +349,16 @@ h3 {
 
 .jobb-bild-container {
     overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
 }
 
 .jobb-bild {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -360,6 +367,10 @@ h3 {
 
 .jobb-bild.active {
     opacity: 1;
+}
+
+.jobb-bild:nth-child(4) {
+    object-position: right;
 }
 
 /* Media queries för större skärmar */

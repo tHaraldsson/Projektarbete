@@ -47,7 +47,15 @@
                     <img class="jobb-bild active" src="Pictures/arb1.jpg"
                         srcset="Pictures/arb1.jpg 640w, Pictures/arb1.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
                         alt="jobb-bild 1">
-
+                    <img class="jobb-bild" src="Pictures/arb2.jpg"
+                        srcset="Pictures/arb2.jpg 640w, Pictures/arb2.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
+                        alt="jobb-bild 2">
+                    <img class="jobb-bild" src="Pictures/arb3.jpg"
+                        srcset="Pictures/arb3.jpg 640w, Pictures/arb3.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
+                        alt="jobb-bild 3">
+                    <img class="jobb-bild" src="Pictures/arb4.jpg"
+                        srcset="Pictures/arb4.jpg 640w, Pictures/arb4.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
+                        alt="jobb-bild 4">
                 </div>
                 <h3>Arborist – Tre års erfarenhet av trädvård och klättring</h3>
                 <p>
@@ -62,6 +70,20 @@
             </article>
         </section>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let bilder = document.querySelectorAll(".jobb-bild");
+            let index = 0;
+
+            function bytBild() {
+                bilder.forEach(bild => bild.classList.remove("active")); // Ta bort active från alla bilder
+                index = (index + 1) % bilder.length; // Växla till nästa bild
+                bilder[index].classList.add("active");
+            }
+
+            setInterval(bytBild, 3000); // Byter bild var tredje sekund
+        });
+    </script>
     <script src="Script/app.js"></script>
 </body>
 
