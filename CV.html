@@ -38,9 +38,37 @@
         </nav>
 
     </header>
+    <img id="hero-image"
+        src="https://i0.wp.com/www.lesclefsdor.org/wp-content/uploads/2018/04/Ola_Ericson_Mariaberget.jpg?fit=1200%2C620&ssl=1"
+        alt="bild på södermalm">
     <main>
         <h2>Curriculum Vitae</h2>
         <section>
+            <article class="teknik-artikel">
+                <div class="jobb-bild-container">
+                    <img class="jobb-bild active" src="Pictures/led1.jpg"
+                        srcset="Pictures/led1.jpg 640w, Pictures/led1.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
+                        alt="jobb-bild 5">
+                    <img class="jobb-bild" src="Pictures/arb2.jpg"
+                        srcset="Pictures/led2.jpg 640w, Pictures/led2.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
+                        alt="jobb-bild 6">
+                    <img class="jobb-bild" src="Pictures/arb3.jpg"
+                        srcset="Pictures/led3.jpg 640w, Pictures/led3.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
+                        alt="jobb-bild 7">
+                    <img class="jobb-bild" src="Pictures/arb4.jpg"
+                        srcset="Pictures/led4.jpg 640w, Pictures/led4.jpg 640w" sizes="(max-width: 600px) 200px, 300px"
+                        alt="jobb-bild 8">
+                </div>
+                <h3>Arbetsledare inom bygg – 5 års erfarenhet av projektledning och teamansvar</h3>
+                <p>
+                    Jag arbetade som arbetsledare inom bygg, där jag ansvarade för planering, koordinering och
+                    genomförande av byggprojekt. Rollen krävde god organisationsförmåga, ledarskap och problemlösning i
+                    en dynamisk miljö. Jag hanterade dagliga arbetsflöden, säkerställde att projekt höll tidsplaner och
+                    budget samt ledde team med fokus på säkerhet och effektivitet. Under denna tid utvecklade jag min
+                    förmåga att fatta snabba och välgrundade beslut samt att kommunicera tydligt med både hantverkare,
+                    beställare och andra intressenter.
+                </p>
+            </article>
 
             <article class="teknik-artikel">
                 <div class="jobb-bild-container">
@@ -72,17 +100,19 @@
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let bilder = document.querySelectorAll(".jobb-bild");
-            let index = 0;
+    document.querySelectorAll(".jobb-bild-container").forEach(container => {
+        let bilder = container.querySelectorAll(".jobb-bild");
+        let index = 0;
 
-            function bytBild() {
-                bilder.forEach(bild => bild.classList.remove("active")); // Ta bort active från alla bilder
-                index = (index + 1) % bilder.length; // Växla till nästa bild
-                bilder[index].classList.add("active");
-            }
+        function bytBild() {
+            bilder.forEach(bild => bild.classList.remove("active")); // Ta bort active från alla bilder i just denna container
+            index = (index + 1) % bilder.length; // Växla till nästa bild
+            bilder[index].classList.add("active");
+        }
 
-            setInterval(bytBild, 3000); // Byter bild var tredje sekund
-        });
+        setInterval(bytBild, 3000); // Byter bild var tredje sekund för just denna container
+    });
+});
     </script>
     <script src="Script/app.js"></script>
 </body>
