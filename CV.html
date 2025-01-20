@@ -43,6 +43,7 @@
         alt="bild på södermalm">
     <main>
         <h2>Curriculum Vitae</h2>
+        <h3>Erfarenhet</h3>
         <section>
             <article class="teknik-artikel">
                 <div class="jobb-bild-container">
@@ -97,22 +98,39 @@
                 </p>
             </article>
         </section>
+        <h3>Utbildning</h3>
+        <section>
+            <article>
+                <article class="teknik-artikel">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROir61u0S_XxpmJ-2poMmQTCFJMGpPd4vZ9A&s"
+                        srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROir61u0S_XxpmJ-2poMmQTCFJMGpPd4vZ9A&s 300w, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROir61u0S_XxpmJ-2poMmQTCFJMGpPd4vZ9A&s 300w"
+                        sizes="(max-width: 600px) 200px, 300px" alt="jobb-bild 5">
+
+                    <h3>Byggnadsingenjör – Utbildning inom byggteknik och projektledning</h3>
+                    <p>
+                        Jag har utbildat mig till byggnadsingenjör på Nackedmin, vilket har gett mig kunskap inom byggteknik,
+                        materialval och projektledning för renoverings-, ombyggnads- och tillbyggnadsprojekt.
+                        Utbildningen har fokuserat på byggnormer, hållbarhet och byggprocessens olika faser, från
+                        planering till genomförande.
+                    </p>
+                </article>
+        </section>
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".jobb-bild-container").forEach(container => {
-        let bilder = container.querySelectorAll(".jobb-bild");
-        let index = 0;
+            document.querySelectorAll(".jobb-bild-container").forEach(container => {
+                let bilder = container.querySelectorAll(".jobb-bild");
+                let index = 0;
 
-        function bytBild() {
-            bilder.forEach(bild => bild.classList.remove("active")); // Ta bort active från alla bilder i just denna container
-            index = (index + 1) % bilder.length; // Växla till nästa bild
-            bilder[index].classList.add("active");
-        }
+                function bytBild() {
+                    bilder.forEach(bild => bild.classList.remove("active")); // Ta bort active från alla bilder i just denna container
+                    index = (index + 1) % bilder.length; // Växla till nästa bild
+                    bilder[index].classList.add("active");
+                }
 
-        setInterval(bytBild, 3000); // Byter bild var tredje sekund för just denna container
-    });
-});
+                setInterval(bytBild, 3000); // Byter bild var tredje sekund för just denna container
+            });
+        });
     </script>
     <script src="Script/app.js"></script>
 </body>

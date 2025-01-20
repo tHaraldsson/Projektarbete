@@ -8,3 +8,7 @@ mobilIkon.addEventListener("click", () => {
     console.log('Hamburgerikonen klickades!');
     mobilNav.classList.toggle("active");
 });
+
+window.addEventListener("load", function () {
+    window.dispatchEvent(new Event('resize'));
+});
