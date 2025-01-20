@@ -55,7 +55,7 @@
         <section id="articles">
             <article data-keywords="HTML" class="teknik-artikel">
                 <img class="artikel-bild" src="Pictures/HTML.png"
-                    srcset="Pictures/HTML.png 1200w, Pictures/HTML.png 1200w" sizes="(max-width: 600px) 100px, 200px"
+                    srcset="Pictures/HTML.png 1200w" sizes="(max-width: 600px) 100px, 200px"
                     alt="Bild på HTML-logga">
                 <h3>HTML – Grunden i min webbutveckling</h3>
                 <p>
@@ -67,7 +67,7 @@
                 </p>
             </article>
             <article data-keywords="CSS" class="teknik-artikel">
-                <img class="artikel-bild" src="Pictures/CSS.png" srcset="Pictures/CSS.png 2050w, Pictures/CSS.png 2050w"
+                <img class="artikel-bild" src="Pictures/CSS.png" srcset="Pictures/CSS.png 2050w"
                     sizes="(max-width: 600px) 100px, 200px" alt="Bild på CSS-logga">
                 <h3>CSS – Styla och designa moderna webbsidor</h3>
                 <p>
@@ -79,7 +79,7 @@
             </article>
             <article data-keywords="Script" class="teknik-artikel">
                 <img class="artikel-bild" src="Pictures/JAVASCRIPT.png"
-                    srcset="Pictures/JAVASCRIPT.png 2000w, Pictures/JAVASCRIPT.png 2000w"
+                    srcset="Pictures/JAVASCRIPT.png 2000w"
                     sizes="(max-width: 600px) 100px, 200px" alt="Bild på JavaScript-logga">
                 <h3>JavaScript – Dynamik och interaktivitet på webben</h3>
                 <p>
@@ -91,7 +91,7 @@
             </article>
             <article data-keywords="Java" class="teknik-artikel">
                 <img class="artikel-bild" src="Pictures/JAVA.png"
-                    srcset="Pictures/JAVA.png 1200w, Pictures/JAVA.png 1200w" sizes="(max-width: 600px) 100px, 200px"
+                    srcset="Pictures/JAVA.png 1200w" sizes="(max-width: 600px) 100px, 200px"
                     alt="Bild på JAVA-logga">
                 <h3>Java – Robust och objektorienterad utveckling</h3>
                 <p>
@@ -103,7 +103,7 @@
                 </p>
             </article>
             <article data-keywords="Databaser" class="teknik-artikel">
-                <img class="artikel-bild" src="Pictures/DB.png" srcset="Pictures/DB.png 512w, Pictures/DB.png 512w"
+                <img class="artikel-bild" src="Pictures/DB.png" srcset="Pictures/DB.png 512w"
                     sizes="(max-width: 600px) 100px, 200px" alt="Bild på databas-logga">
                 <h3>SQL och NoSQL – Flexibilitet och Effektivitet i Databashantering</h3>
                 <p>
@@ -132,7 +132,7 @@
             articles.forEach(function (article) {
                 let keywords = article.getAttribute('data-keywords');
 
-                if (filterValue === "" || keywords.includes(filterValue)) {
+                if (keywords.includes(filterValue)) {
                     article.style.display = "flex"; // Visa artikel
                 } else {
                     article.style.display = "none"; // Dölj artikel

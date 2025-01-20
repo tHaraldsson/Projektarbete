@@ -3,7 +3,7 @@
 ========================================
 
 ------------------------------
-|      Mobilversion         	  |       Desktopversion 	          |
+|      Mobilversion         	  |       Desktopversion 	      |
 ------------------------------
 |  [Header]                       |  [Header]                     |
 |  [Logo] [Hamburgermeny]         |  [Navigeringslänkar]   	      |
@@ -25,7 +25,7 @@
 |      Mobilversion 	          |       Desktopversion    	  |
 ------------------------------
 |  [Header]                       |  [Header]                     |
-|  [Logo] [Hamburgermeny]         |  [Logo] [Navigeringslänkar]   |
+|  [Logo] [Hamburgermeny]         |  [Navigeringslänkar]          |
 ------------------------------
 |  [Hero Image]                   |  [Hero Image – Full width]    |
 ------------------------------
@@ -51,9 +51,9 @@
 ------------------------------
 |  [Filtreringsmeny]              |  [Filtreringsmeny]           |
 ------------------------------
-|  [Artikellista – 1 per rad]     |  [Artikellista – flex]	     |
+|  [Artikellista – 1 per rad]     |  [Artikellista – flexwrap]	 |
 |  [HTML]                         |  [HTML]  [CSS]  [JavaScript] |
-|  [CSS]                          |  [Java]  [Databaser]         |
+|  [CSS]...                       |  [Java]  [Databaser]         |
 ------------------------------
 |  [Footer]                       |  [Footer]                    |
 ------------------------------
