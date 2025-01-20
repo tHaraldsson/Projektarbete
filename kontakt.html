@@ -38,8 +38,7 @@
         </nav>
 
     </header>
-    <img id="hero-image"
-        src="https://sofo-stockholm.se/wp-content/uploads/2017/01/NYTORGET-1.jpg"
+    <img id="hero-image" src="https://sofo-stockholm.se/wp-content/uploads/2017/01/NYTORGET-1.jpg"
         alt="bild på södermalm">
     <main>
         <section id="form">
@@ -94,14 +93,15 @@
     </footer>
     <script src="Script/app.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>emailjs.init("gbZbI9VieA3iRMqna"); // Ersätt med din Public Key
+    <script>
+        emailjs.init("gbZbI9VieA3iRMqna"); // Public Key
 
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.querySelector("form");
-        
+
             form.addEventListener("submit", function (event) {
                 event.preventDefault(); // Förhindra att sidan laddas om
-        
+
                 // Skicka formulärdata via EmailJS
                 emailjs.sendForm("service_es269xs", "template_dkjwxx5", form)
                     .then(function (response) {
@@ -111,7 +111,8 @@
                         alert("Ett fel uppstod: " + error.text);
                     });
             });
-        });</script>
+        });
+    </script>
 </body>
 
 </html>

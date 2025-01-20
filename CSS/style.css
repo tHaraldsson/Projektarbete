@@ -372,6 +372,10 @@ h3 {
     object-position: right;
 }
 
+.utbildnings-bild {
+    border-radius: 50px;
+}
+
 /* Media queries för större skärmar */
 @media (min-width: 768px) {
 

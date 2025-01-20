@@ -1,0 +1,101 @@
+========================================
+          Wireframes – Startsida
+========================================
+
+------------------------------
+|      Mobilversion         	  |       Desktopversion 	          |
+------------------------------
+|  [Header]                       |  [Header]                     |
+|  [Logo] [Hamburgermeny]         |  [Navigeringslänkar]   	      |
+------------------------------
+|  [Hero Image]                   |  [Hero Image – Full width]    |
+------------------------------
+|  [Introduktionstext]            |  [Introduktionstext]          |
+------------------------------
+|  [Footer]                       |  [Footer]                     |
+------------------------------
+
+
+
+========================================
+          Wireframes – Om mig
+========================================
+
+------------------------------
+|      Mobilversion 	          |       Desktopversion    	  |
+------------------------------
+|  [Header]                       |  [Header]                     |
+|  [Logo] [Hamburgermeny]         |  [Logo] [Navigeringslänkar]   |
+------------------------------
+|  [Hero Image]                   |  [Hero Image – Full width]    |
+------------------------------
+|  [Profilbild]                   |  [Profilbild]                 |
+------------------------------
+|  [Kort beskrivning]             |  [Kort beskrivning]           |
+------------------------------
+|  [Footer]                       |  [Footer]                     |
+------------------------------
+
+
+========================================
+          Wireframes – Teknik
+========================================
+
+------------------------------
+|      Mobilversion 	 	      |       Desktopversion 	     |
+------------------------------
+|  [Header]                       |  [Header]                    |
+|  [Logo] [Hamburgermeny]         |  [Navigeringslänkar]  	     |
+------------------------------
+|  [Hero Image]                   |  [Hero Image – Full width]   |
+------------------------------
+|  [Filtreringsmeny]              |  [Filtreringsmeny]           |
+------------------------------
+|  [Artikellista – 1 per rad]     |  [Artikellista – flex]	     |
+|  [HTML]                         |  [HTML]  [CSS]  [JavaScript] |
+|  [CSS]                          |  [Java]  [Databaser]         |
+------------------------------
+|  [Footer]                       |  [Footer]                    |
+------------------------------
+
+
+========================================
+          Wireframes – Kontakt
+========================================
+
+------------------------------
+|      Mobilversion 	           |       Desktopversion   	   |
+------------------------------
+|  [Header]                        |  [Header]                     |
+|  [Logo] [Hamburgermeny]          |  [Navigeringslänkar]   	   |
+------------------------------
+|  [Hero Image]                    |  [Hero Image – Full width]    |
+------------------------------
+|  [Kontaktformulär]               |  [Kontaktformulär]            |
+|  [Namn]                          |  [Namn]                       |
+|  [E-post]                        |  [E-post]                     |
+|  [Meddelande]                    |  [Meddelande]                 |
+|  [Skicka-knapp]                  |  [Skicka-knapp]               |
+------------------------------
+|  [Footer]                        |  [Footer]                     |
+------------------------------
+
+
+========================================
+          Wireframes – CV
+========================================
+
+------------------------------
+|      Mobilversion 		      |       Desktopversion 	      |
+------------------------------
+|  [Header]                       |  [Header]                     |
+|  [Logo] [Hamburgermeny]         |  [Navigeringslänkar]    	  |
+------------------------------
+|  [Hero Image]                   |  [Hero Image – Full width]    |
+------------------------------
+|  [Avsnitt: Arbetserfarenhet]    |  [Avsnitt: Arbetserfarenhet]  |
+------------------------------
+|  [Avsnitt: Utbildning]          |  [Avsnitt: Utbildning]        |
+------------------------------
+|  [Footer]                       |  [Footer]                     |
+------------------------------
