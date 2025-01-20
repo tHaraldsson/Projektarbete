@@ -14,30 +14,19 @@ body {
     height: 50px;
     position: absolute;
     top: 20px;
-    /* Justera detta för att flytta den upp eller ner */
     left: 20px;
-    /* Justera detta för att flytta den vänster eller höger */
-    z-index: 100;
-    /* Se till att ikonen ligger ovanpå andra element om nödvändigt */
 }
 
-
-/* Rubrik-namn styling */
 .rubrik-namn {
     text-align: center;
-    /* Centerar rubrikerna */
     margin: 10px;
-
 }
 
 .rubrik-namn h1 {
     margin: 5px 0;
-    /* Avstånd mellan rubriker */
     font-size: 24px;
-    /* Mindre textstorlek för mobiler */
 }
 
-/* Header styling */
 header {
     display: flex;
     flex-direction: column;
@@ -66,22 +55,17 @@ header {
 }
 
 #mobilnav.active {
-    max-height: 100px; /* Justera detta beroende på hur stor menyn är */
+    max-height: 100px;
     opacity: 1;
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
-    /* Tillåter radbrytning för små skärmar */
     justify-content: center;
     gap: 20px;
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    margin: 0;
 }
 
 nav ul li a {
@@ -101,8 +85,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-
-
 #welcome {
     max-width: 600px;
     margin: 20px auto;
@@ -110,12 +92,9 @@ nav ul li a:hover {
     margin-bottom: 100px;
 }
 
-
-/* Hero-bild styling */
 #hero-image {
     width: 100%;
     height: auto;
-    /* Bevarar proportionerna */
     display: block;
     object-fit: cover;
 }
@@ -124,7 +103,6 @@ nav ul li a:hover {
 main {
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: left;
     padding: 20px;
     text-align: left;
@@ -134,7 +112,6 @@ main {
 
 main p {
     font-size: 16px;
-    /* Justera textstorlek */
     text-align: center;
 }
 
@@ -153,15 +130,14 @@ footer {
     width: 100%;
 }
 
-#github-bild {
+#github-bild,
+#linkedin-bild {
     width: 30px;
     height: 30px;
 }
 
 #linkedin-bild {
-    width: 30px;
-    height: 30px;
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 section {
@@ -185,7 +161,6 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 #om-mig {
     display: flex;
     flex-wrap: wrap;
@@ -203,7 +178,6 @@ section {
 #om-mig-text {
     flex: 1;
     max-width: 600px;
-    text-align: left;
 }
 
 #om-mig-rubrik {
@@ -281,7 +255,6 @@ input[type="submit"] {
     display: block;
     margin: 20px auto;
     width: auto;
-    /* Anpassar bredden till innehållet */
     background-color: #ffa600;
     color: white;
     border: none;
@@ -307,7 +280,6 @@ input[type="submit"]:hover {
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 #kontakt-info h2,
 h2 {
@@ -378,25 +350,19 @@ h3 {
 
 /* Media queries för större skärmar */
 @media (min-width: 768px) {
-
-
-
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 0 50px;
-
     }
 
     .rubrik-namn {
         text-align: left;
         position: absolute;
-
         left: 20px;
         line-height: 0.8;
-
     }
 
     #mobilnav {
@@ -420,7 +386,6 @@ h3 {
 
     #hero-image {
         height: 400px;
-        /* Fast höjd för större skärmar */
     }
 
     main h1 {
@@ -433,20 +398,5 @@ h3 {
 
     footer {
         font-size: 16px;
-    }
-
-    #kontakt-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 20px;
-        width: 100%;
-        max-width: 500px;
-        /* Maxbredd som formens ruta */
-        margin: 20px auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
